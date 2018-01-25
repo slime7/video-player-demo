@@ -1,0 +1,32 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true
+    },
+    "extends": "standard",
+    "globals": {
+        "flvjs": false
+    },
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "sourceType": "module"
+    },
+    "plugins": ["html"],
+    "settings": {
+        "html/html-extensions": [".html"]
+    },
+    "rules": {
+        "arrow-parens": "error",
+        "no-const-assign": "warn",
+        "no-this-before-super": "warn",
+        "no-undef": "error",
+        "no-unreachable": "warn",
+        "no-unused-vars": "warn",
+        "constructor-super": "warn",
+        "valid-typeof": "warn",
+        "space-before-function-paren": "off",
+        "semi": ["error", "always"],
+        "indent": ["warn", 2, { "SwitchCase": 1 }]
+    }
+}

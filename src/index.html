@@ -1,0 +1,61 @@
+<html>
+
+<head>
+  <meta name="force-rendering" content="webkit">
+  <meta name="renderer" content="webkit" />
+  <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <title>html5 video player</title>
+  <script src="./js/flv.min.js"></script>
+</head>
+
+<body>
+  <div class="player">
+    <div class="player-form">
+      <input id="media-url">
+      <select id="media-type">
+        <option value="liveFlv">live:flv</option>
+        <option value="liveMp4">live:mp4</option>
+        <option value="mp4">mp4</option>
+        <option value="flv">flv</option>
+      </select>
+      <button id="load-media">Load</button>
+    </div>
+    <div class="player-container">
+      <video class="media" id="media"></video>
+      <div class="loader">
+        <svg viewBox="0 0 32 32">
+          <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
+        </svg>
+      </div>
+      <div class="controls active">
+        <div class="progress-bar">
+          <div class="progress-buffered"></div>
+          <div class="progress-played"></div>
+          <div class="progress-seek"></div>
+        </div>
+        <button class="ctrl-block play-pause">
+          <svg class="ctrl-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path class="play" d="M8 5v14l11-7z"/><path class="pause" d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="ctrl-block media-time">
+          <span id="media-current">--:--</span> / <span id="media-duration">--:--</span>
+        </div>
+        <span class="ctrl-block flex"></span>
+        <button class="ctrl-block fullscreen">
+          <svg class="ctrl-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path class="fullscreen-enter" d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!--input id="media-range" value="0">
+  <button id="seek">seek</button-->
+  <br><br><br><br>
+  <link rel="stylesheet" href="./style/main.css">
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
